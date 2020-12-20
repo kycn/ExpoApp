@@ -1,5 +1,7 @@
 package com.kycn.expoapp.characters.di
 
+import android.app.Activity
+import android.view.LayoutInflater
 import com.kycn.expoapp.characters.datasource.CharactersRemoteDataSourceImpl
 import com.kycn.expoapp.characters.repository.CharactersRepositoryImpl
 import com.kycn.expoapp.characters.service.CharactersApi
@@ -32,4 +34,7 @@ object CharactersModule {
     fun providesGetCharactersUseCase(charactersRepositoryImpl: CharactersRepositoryImpl): GetCharactersUseCase {
         return GetCharactersUseCase(charactersRepositoryImpl)
     }
+
+    @Provides
+    fun provideLayoutInflater(activity: Activity) = LayoutInflater.from(activity)
 }

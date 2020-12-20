@@ -2,7 +2,7 @@ package com.kycn.expoapp.characters.datasource
 
 import com.kycn.expoapp.characters.service.CharactersApi
 import com.kycn.expoapp.characters.service.model.CharactersResult
-import com.kycn.expoapp.common.ApiResult
+import com.kycn.expoapp.common.service.ApiResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import java.lang.Exception

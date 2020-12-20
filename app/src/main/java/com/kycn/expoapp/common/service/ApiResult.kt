@@ -1,4 +1,4 @@
-package com.kycn.expoapp.common
+package com.kycn.expoapp.common.service
 
 data class ApiResult<out T>(val status: Status, val data: T?, val message: String?) {
 

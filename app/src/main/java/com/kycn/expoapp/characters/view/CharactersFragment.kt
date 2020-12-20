@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.kycn.expoapp.R
 import com.kycn.expoapp.characters.viewmodel.CharactersViewModel
-import com.kycn.expoapp.common.ApiResult
+import com.kycn.expoapp.common.service.ApiResult
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

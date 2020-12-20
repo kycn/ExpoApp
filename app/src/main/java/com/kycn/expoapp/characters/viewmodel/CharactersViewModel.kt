@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kycn.expoapp.characters.service.model.CharactersResult
 import com.kycn.expoapp.characters.usecase.GetCharactersUseCase
-import com.kycn.expoapp.common.ApiResult
+import com.kycn.expoapp.common.service.ApiResult
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
