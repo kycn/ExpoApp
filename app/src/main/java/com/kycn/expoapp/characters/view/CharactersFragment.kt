@@ -1,21 +1,20 @@
-package com.kycn.expoapp
+package com.kycn.expoapp.characters.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.kycn.expoapp.characters.viewmodel.CharactersViewModel
 import com.kycn.expoapp.common.ApiResult
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class CharactersFragment : Fragment() {
 
     private val charactersViewModel : CharactersViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
     }
 
     override fun onStart() {

@@ -42,6 +42,8 @@ dependencies {
     // support
     implementation deps.support.appCompat
     implementation deps.support.ktx
+    implementation deps.support.activityKtx
+    implementation deps.support.fragmentKtx
 
     // view
     implementation deps.view.constraintLayout
@@ -61,7 +63,9 @@ dependencies {
     implementation deps.retrofit.rxjava2
 
     //dagger
+    kapt deps.dagger.androidxHiltCompiler
     implementation deps.dagger.daggerHilt
+    implementation deps.dagger.daggerHiltLifecycle
     kapt deps.dagger.daggerHiltCompiler
 
     // test
