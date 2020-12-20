@@ -1,31 +1,51 @@
 package com.kycn.expoapp.characters.view
 
-import android.util.Log
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.kycn.expoapp.R
 import com.kycn.expoapp.characters.viewmodel.CharactersViewModel
 import com.kycn.expoapp.common.service.ApiResult
+import com.kycn.expoapp.common.view.ViewFactory
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class CharactersFragment : Fragment(R.layout.fragment_characters) {
 
     private val charactersViewModel : CharactersViewModel by viewModels()
 
+    @Inject
+    lateinit var viewFactory : ViewFactory
+
+    private lateinit var charactersView: CharactersView
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        charactersView = viewFactory.newInstance(CharactersView::class, null)
+        return charactersView.getRoot()
+    }
+
     override fun onStart() {
         super.onStart()
 
-        charactersViewModel.characters.observe( this, {
+        charactersViewModel.characters.observe(this, {
             when (it.status) {
                 ApiResult.Status.LOADING -> {
-                    Log.d("Kaya", "loading")
+                    charactersView.loading()
                 }
                 ApiResult.Status.SUCCESS -> {
-                    Log.d("Kaya", it.data?.results.toString())
+                    charactersView.setCharacters(it.data?.results!!)
                 }
                 ApiResult.Status.ERROR -> {
-                    Log.d("Kaya", it.message!!)
+                    Toast.makeText(activity, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         })
