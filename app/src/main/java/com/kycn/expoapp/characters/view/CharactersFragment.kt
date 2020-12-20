@@ -1,21 +1,17 @@
 package com.kycn.expoapp.characters.view
 
-import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.kycn.expoapp.R
 import com.kycn.expoapp.characters.viewmodel.CharactersViewModel
 import com.kycn.expoapp.common.ApiResult
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CharactersFragment : Fragment() {
+class CharactersFragment : Fragment(R.layout.fragment_characters) {
 
     private val charactersViewModel : CharactersViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onStart() {
         super.onStart()
