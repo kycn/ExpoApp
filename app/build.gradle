@@ -48,6 +48,7 @@ dependencies {
     // view
     implementation deps.view.constraintLayout
     implementation deps.view.material
+    implementation deps.view.recyclerview
 
     // navigation
     implementation deps.navigation.framentKtx
