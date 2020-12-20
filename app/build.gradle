@@ -49,6 +49,10 @@ dependencies {
     implementation deps.view.constraintLayout
     implementation deps.view.material
 
+    // navigation
+    implementation deps.navigation.framentKtx
+    implementation deps.navigation.uiKtx
+
     // lifecycle
     implementation deps.lifecycle.livedata
     implementation deps.lifecycle.viewmodel

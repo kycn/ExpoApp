@@ -9,6 +9,7 @@ buildscript {
             'daggerHilt':'2.28-alpha',
             'daggetHiltLifecycle':'1.0.0-alpha02',
             'fragmentKtx':'1.2.5',
+            'nav':'2.3.2',
             'okhttp3':'4.9.0',
             'espresso':'3.3.0',
             'gradle':'4.1.1',
@@ -33,6 +34,10 @@ buildscript {
             'lifecycle': [
                     'livedata':"androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
                     'viewmodel':"androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+            ],
+            'navigation': [
+                    'framentKtx':"androidx.navigation:navigation-fragment-ktx:${versions.nav}",
+                    'uiKtx':"androidx.navigation:navigation-ui-ktx:${versions.nav}"
             ],
             'retrofit': [
                     'gson':"com.squareup.retrofit2:converter-gson:${versions.retrofit}",
