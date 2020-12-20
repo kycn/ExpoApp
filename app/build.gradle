@@ -56,6 +56,7 @@ dependencies {
 
     // retrofit
     implementation deps.retrofit.gson
+    implementation deps.retrofit.okhttp3
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.rxjava2
 
