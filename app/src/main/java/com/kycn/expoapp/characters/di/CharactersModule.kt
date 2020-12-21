@@ -37,8 +37,8 @@ object CharactersModule {
     }
 
     @Provides
-    fun provideLayoutInflater(activity: Activity) = LayoutInflater.from(activity)
+    fun provideLayoutInflater(activity: Activity): LayoutInflater = LayoutInflater.from(activity)
 
     @Provides
-    fun provideGlideImageLoader(activity: Activity) = GlideImageLoader(activity)
+    fun provideGlideImageLoader(activity: Activity) : GlideImageLoader = GlideImageLoader(activity)
 }
