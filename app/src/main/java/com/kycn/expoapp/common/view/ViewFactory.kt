@@ -8,17 +8,18 @@ import javax.inject.Inject
 import kotlin.reflect.KClass
 
 class ViewFactory @Inject constructor(
-    private val layoutInflater: LayoutInflater
+    private val layoutInflater: LayoutInflater,
+    private val imageLoader: GlideImageLoader
 ) {
 
     fun <T : BaseView> newInstance(viewClass: KClass<T>, @Nullable container: ViewGroup?): T {
         val view: BaseView
         when (viewClass) {
             CharactersView::class -> {
-                view = CharactersView(layoutInflater, container)
+                view = CharactersView(layoutInflater, imageLoader, container)
             }
             else -> {
-                throw IllegalArgumentException("unsupported MVC view class $viewClass")
+                throw IllegalArgumentException("unsupported view class $viewClass")
             }
         }
         return view as T
