@@ -6,6 +6,7 @@ import com.kycn.expoapp.characters.datasource.CharactersRemoteDataSourceImpl
 import com.kycn.expoapp.characters.repository.CharactersRepositoryImpl
 import com.kycn.expoapp.characters.service.CharactersApi
 import com.kycn.expoapp.characters.usecase.GetCharactersUseCase
+import com.kycn.expoapp.common.view.GlideImageLoader
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,4 +38,7 @@ object CharactersModule {
 
     @Provides
     fun provideLayoutInflater(activity: Activity) = LayoutInflater.from(activity)
+
+    @Provides
+    fun provideGlideImageLoader(activity: Activity) = GlideImageLoader(activity)
 }

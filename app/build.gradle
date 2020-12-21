@@ -73,6 +73,10 @@ dependencies {
     implementation deps.dagger.daggerHiltLifecycle
     kapt deps.dagger.daggerHiltCompiler
 
+    // glide
+    implementation deps.glide.glide
+    annotationProcessor deps.glide.glideCompiler
+
     // test
     androidTestImplementation deps.test.espresso
     testImplementation deps.test.junit
