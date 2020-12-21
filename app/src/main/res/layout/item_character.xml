@@ -45,6 +45,13 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Rick" />
 
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_status,tv_species, tv_gender" />
+
         <TextView
             android:id="@+id/tv_status"
             android:layout_width="wrap_content"
@@ -61,11 +68,10 @@
             android:id="@+id/tv_status_val"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/tv_status"
-            app:layout_constraintStart_toEndOf="@id/tv_status"
-            app:layout_constraintTop_toTopOf="@id/tv_status"
+            app:layout_constraintStart_toEndOf="@id/barrier"
             tools:text="Dead" />
 
         <TextView
@@ -84,11 +90,10 @@
             android:id="@+id/tv_species_val"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/tv_species"
-            app:layout_constraintStart_toEndOf="@id/tv_species"
-            app:layout_constraintTop_toTopOf="@id/tv_species"
+            app:layout_constraintStart_toEndOf="@id/barrier"
             tools:text="Human" />
 
         <TextView
@@ -109,11 +114,10 @@
             android:id="@+id/tv_gender_val"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/barrier"
             app:layout_constraintBottom_toBottomOf="@id/tv_gender"
-            app:layout_constraintStart_toEndOf="@id/tv_gender"
-            app:layout_constraintTop_toTopOf="@id/tv_gender"
             tools:text="Male" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
