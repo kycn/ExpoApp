@@ -2,7 +2,6 @@ package com.kycn.expoapp.characters.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.kycn.expoapp.characters.entity.CharacterItem
 import com.kycn.expoapp.characters.service.model.CharactersResult
 import com.kycn.expoapp.characters.usecase.GetCharactersUseCase
 import com.kycn.expoapp.common.service.ApiResult
@@ -42,7 +41,7 @@ class CharactersViewModelTest {
     }
 
     @Test
-    fun `getProducts called empty list returned successfully`() {
+    fun `getCharacters called empty list returned successfully`() {
         testCoroutineRule.runBlockingTest {
             Mockito.doReturn(flowOf(ApiResult.success(CharactersResult(emptyList()))))
                 .`when`(getCharactersUseCase)
@@ -58,7 +57,7 @@ class CharactersViewModelTest {
     }
 
     @Test
-    fun `getProducts called with predefined list, that list returned successfully`() {
+    fun `getCharacters called with predefined list, that list returned successfully`() {
         testCoroutineRule.runBlockingTest {
             Mockito.doReturn(flowOf(ApiResult.success(CHARACTERS)))
                 .`when`(getCharactersUseCase)
@@ -74,7 +73,7 @@ class CharactersViewModelTest {
     }
 
     @Test
-    fun `getProducts called loading returned with loading api result value`() {
+    fun `getCharacters called loading returned with loading api result value`() {
         testCoroutineRule.runBlockingTest {
             Mockito.doReturn(flowOf(ApiResult.loading(null)))
                 .`when`(getCharactersUseCase)
@@ -90,7 +89,7 @@ class CharactersViewModelTest {
     }
 
     @Test
-    fun `getProducts called failure returned with error api result value`() {
+    fun `getCharacters called failure returned with error api result value`() {
         testCoroutineRule.runBlockingTest {
             Mockito.doReturn(flowOf(ApiResult.error("Error message", null)))
                 .`when`(getCharactersUseCase)
