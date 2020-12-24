@@ -15,6 +15,7 @@ An expo application to show some of my Android development skills
 - Retrofit
 - Navigation
 - Glide
+- Mockito
 
 *in progress*
 - Paging3
