@@ -78,7 +78,11 @@ dependencies {
     annotationProcessor deps.glide.glideCompiler
 
     // test
+    testImplementation deps.test.core
+    testImplementation deps.test.coroutinesTest
     androidTestImplementation deps.test.espresso
     testImplementation deps.test.junit
     androidTestImplementation deps.test.junitImpl
+    testImplementation deps.test.mockito
+    testImplementation deps.test.mockitoInline
 }
