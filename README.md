@@ -17,7 +17,6 @@ An expo application to show some of my Android development skills
 - Glide
 
 *in progress*
-- unit testing
 - Paging3
 - Room
 - A version with pure dependency injection 
